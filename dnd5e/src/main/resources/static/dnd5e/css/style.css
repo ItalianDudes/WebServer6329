@@ -770,7 +770,54 @@ body::before {
 }
 
 /* Sheet Tab Privileges And Traits */
-#sheet-tab-privileges-and-traits-text-areas {
-    resize: vertical;
+.sheet-tab-spells-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 5px;
+}
+
+.sheet-tab-spells-row {
+    display: flex;
+    flex: 1;
+    gap: 5px;
+}
+
+.sheet-tab-spells-box {
+    flex: 1;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sheet-tab-spells-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.sheet-tab-spells-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     width: 100%;
+}
+
+.sheet-tab-spells-cell {
+    padding: 6px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, border 0.2s ease;
+    margin-bottom: 5px;
+}
+
+.sheet-tab-spells-cell:hover {
+    background-color: var(--accent);
+    border: 4px solid black;
 }

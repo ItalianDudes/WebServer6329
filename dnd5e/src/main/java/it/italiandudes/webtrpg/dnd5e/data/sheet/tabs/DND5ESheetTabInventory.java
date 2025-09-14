@@ -61,7 +61,7 @@ public class DND5ESheetTabInventory extends AuditableEntity {
     // Methods
     public void updateCurrentLoad() {} // TODO
     public String getLoadPercentage() {
-        return ((currentLoad / maxLoad * 100.0) + "%").formatted("#.##");
+        return String.valueOf(currentLoad / maxLoad * 100.0).formatted("#.##") + '%';
     }
 
     // Private Setters (Not accessible)

@@ -1,8 +1,10 @@
 package it.italiandudes.webtrpg.dnd5e.data.sheet.enums;
 
+import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
 // DO NOT CHANGE THE ENUM NAMES, SOME METHODS USE THE FINAL METHOD "name()" FOR THE DB
+@Getter
 public enum DND5EProficiencyLevel {
     SEVERE_INEPTITUDE("Grave Incompetenza"),
     INEPTITUDE("Incompetenza"),

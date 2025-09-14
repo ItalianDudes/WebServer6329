@@ -73,6 +73,7 @@ public final class ControllerDND5ESheets {
         }
         return "dnd5e/sheet";
     }
+
     @GetMapping("/dnd5e/campaigns/{campaign-id}/sheets/{sheet-id}/tab/{tab-name}")
     private String getSheetTab(@PathVariable(name = "campaign-id") Long campaignID, @PathVariable(name = "sheet-id") Long sheetID, @PathVariable(name = "tab-name") String tabName, Model model) {
         Optional<DND5ECampaign> optCampaign = campaignRepository.findById(campaignID);
@@ -82,6 +83,7 @@ public final class ControllerDND5ESheets {
             if (optSheet.isPresent()) {
                 model.addAttribute("sheet", optSheet.get());
                 model.addAttribute("proficiencyLevels", DND5EProficiencyLevel.values());
+                model.addAttribute("mainAbilities", DND5EMainAbilities.values());
                 model.addAttribute("proficiencyLevelsReadableTexts", Arrays.stream(DND5EProficiencyLevel.values()).map(Enum::toString).collect(Collectors.toList()));
                 model.addAttribute("languageProficiencyLevelsReadableTexts", Arrays.stream(DND5ELanguageProficiencyLevel.values()).map(Enum::toString).collect(Collectors.toList()));
                 switch (tabName) {
