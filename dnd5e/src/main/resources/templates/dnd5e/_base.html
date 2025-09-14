@@ -2,6 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="it">
     <head>
         <meta charset="UTF-8"/>
+        <meta name="_csrf" th:content="${_csrf.token}"/>
+        <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
         <link rel="icon" type="image/x-icon" th:href="@{/dnd5e/favicon.ico}"/>
         <link rel="stylesheet" type="text/css" th:href="@{/dnd5e/css/style.css}"/>
         <title layout:fragment="title">D&D5E-WebTRPG</title>
@@ -49,6 +51,12 @@
                 if (evt.detail.elt?.classList?.contains('tab-link')) {
                     evt.detail.elt.classList.add('active');
                 }
+            });
+
+            document.body.addEventListener('htmx:configRequest', function (event) {
+                const token = document.querySelector('meta[name="_csrf"]').getAttribute('content');
+                const header = document.querySelector('meta[name="_csrf_header"]').getAttribute('content');
+                event.detail.headers[header] = token;
             });
         </script>
     </body>
