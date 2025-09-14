@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!--suppress HtmlFormInputWithoutLabel -->
+<!--suppress HtmlFormInputWithoutLabel, HtmlRequiredAltAttribute -->
 <html xmlns:th="http://www.thymeleaf.org" lang="it">
     <div class="sheet-tab-character-header-container">
         <span>
             <label>Nome Personaggio</label>
-            <input class="sheet-tab-character-name" type="text" th:text="${sheet.getTabCharacter().getCharacterName()}"/>
+            <input class="sheet-tab-character-name" type="text" th:value="${sheet.getTabCharacter().getCharacterName()}"/>
         </span>
         <span>
             <label>Classe<input type="text" th:value="${sheet.getTabCharacter().getCharacterClass()}"/></label>
