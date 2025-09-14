@@ -1,1 +1,32 @@
-<h1>TESTER INVENTORY</h1>
+<!DOCTYPE html>
+<!--suppress HtmlFormInputWithoutLabel -->
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+    <div style="display: grid;row-gap: 5px;">
+        <div style="display: grid;border: 3px solid black;border-radius: 4px;padding: 5px;">
+            <label th:text="@{'Carico: ' + ${sheet.getTabInventory().getCurrentLoad()} + 'Kg/' + ${sheet.getTabInventory().getMaxLoad()} + 'Kg'}"></label>
+            <label th:text="@{'Percentuale di Carico: ' + ${sheet.getTabInventory().getLoadPercentage()}}"></label>
+            <label>Categoria di Carico: Leggero</label>
+        </div>
+        <div style="display: flex;gap: 5px;border: 3px solid black;border-radius: 4px;padding: 5px;">
+            <label style="flex: 1;">MR:<input type="number" min="0" th:value="${sheet.getTabInventory().getMc()}"/></label>
+            <label style="flex: 1;">MA:<input type="number" min="0" th:value="${sheet.getTabInventory().getMs()}"/></label>
+            <label style="flex: 1;">ME:<input type="number" min="0" th:value="${sheet.getTabInventory().getMe()}"/></label>
+            <label style="flex: 1;">MO:<input type="number" min="0" th:value="${sheet.getTabInventory().getMg()}"/></label>
+            <label style="flex: 1;">MP:<input type="number" min="0" th:value="${sheet.getTabInventory().getMp()}"/></label>
+        </div>
+        <div style="border: 3px solid black;border-radius: 4px;padding: 5px;">
+            <table id="inventoryTable">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Rarità</th>
+                    <th>Peso (KG)</th>
+                    <th>Costo (MR)</th>
+                    <th>Quantità</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</html>

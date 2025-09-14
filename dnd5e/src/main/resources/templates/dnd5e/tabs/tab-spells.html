@@ -1,1 +1,104 @@
-<h1>TESTER SPELLS</h1>
+<!DOCTYPE html>
+<!--suppress HtmlFormInputWithoutLabel -->
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+    <div style="display: grid;row-gap: 5px;">
+        <div style="display: grid;border: 3px solid black;border-radius: 4px;padding: 5px;">
+            <label style="flex: 1;">CLASSE DA INCANTATORE:<input type="text" th:value="${sheet.getTabCharacter().getCharacterClass()}" readonly/></label>
+            <span>
+                <label>CARATTERISTICA DA INCANTATORE<select><option th:each="mainAbility : ${mainAbilities}" th:text="${mainAbility.toString()}" th:value="${mainAbility}" th:selected="${mainAbility.name() == 'STRENGTH'}"></option></select></label>
+                <label style="flex: 1;">CD TIRO SALVEZZA INCANTESIMI<input type="number" th:value="${sheet.getTabSpells().getSpellST()}" readonly/></label>
+                <label style="flex: 1;">BONUS DI ATTACCO INCANTESIMI<input type="number" th:value="${sheet.getTabSpells().getSpellAttackBonus()}" readonly/></label>
+            </span>
+        </div>
+        <div class="sheet-tab-spells-container">
+            <div class="sheet-tab-spells-row">
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">Trucchetti</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Luce</li>
+                        <li class="sheet-tab-spells-cell">Mano magica</li>
+                        <li class="sheet-tab-spells-cell">Prestidigitazione</li>
+                    </ul>
+                </div>
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">1° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Armatura magica</li>
+                        <li class="sheet-tab-spells-cell">Dardo incantato</li>
+                        <li class="sheet-tab-spells-cell">Scudo</li>
+                    </ul>
+                </div>
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">2° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Invisibilità</li>
+                        <li class="sheet-tab-spells-cell">Raggio rovente</li>
+                        <li class="sheet-tab-spells-cell">Blocca persone</li>
+                    </ul>
+                </div>
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">3° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Palla di fuoco</li>
+                        <li class="sheet-tab-spells-cell">Volare</li>
+                        <li class="sheet-tab-spells-cell">Controincantesimo</li>
+                    </ul>
+                </div>
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">4° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Porta dimensionale</li>
+                        <li class="sheet-tab-spells-cell">Invisibilità superiore</li>
+                        <li class="sheet-tab-spells-cell">Evoca creatura</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sheet-tab-spells-row">
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">5° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Teletrasporto</li>
+                        <li class="sheet-tab-spells-cell">Muraglia di forza</li>
+                        <li class="sheet-tab-spells-cell">Disintegrazione</li>
+                    </ul>
+                </div>
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">6° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Metamorfosi</li>
+                        <li class="sheet-tab-spells-cell">Campo antimagia</li>
+                        <li class="sheet-tab-spells-cell">Evoca elementale</li>
+                    </ul>
+                </div>
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">7° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Dominare mostro</li>
+                        <li class="sheet-tab-spells-cell">Proiezione astrale</li>
+                        <li class="sheet-tab-spells-cell">Tempesta di energia</li>
+                    </ul>
+                </div>
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">8° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Desiderio</li>
+                        <li class="sheet-tab-spells-cell">Prigione</li>
+                        <li class="sheet-tab-spells-cell">Tempo congelato</li>
+                    </ul>
+                </div>
+                <div class="sheet-tab-spells-box">
+                    <div class="sheet-tab-spells-title">9° Livello</div>
+                    <ul class="sheet-tab-spells-list">
+                        <li class="sheet-tab-spells-cell">Apocalisse</li>
+                        <li class="sheet-tab-spells-cell">Risveglio divino</li>
+                        <li class="sheet-tab-spells-cell">Evoca divinità</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</html>
