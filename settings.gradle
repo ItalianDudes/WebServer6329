@@ -1,2 +1,2 @@
-rootProject.name = 'WebTRPG'
+rootProject.name = 'WebServer6329'
 include 'core', 'web', 'dnd5e', 'fallout'

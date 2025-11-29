@@ -41,7 +41,7 @@ bootRun {
 // BootJar Definition
 bootJar {
     manifest {
-        attributes "Title" : "WebTRPG"
+        attributes "Title" : "WebServer6329"
         attributes "Vendor" : "ItalianDudes"
         attributes "Version" : archiveVersion.get()
         attributes "Version-Number" : archiveVersion.get()

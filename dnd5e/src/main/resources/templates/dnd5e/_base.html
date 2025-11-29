@@ -6,17 +6,17 @@
         <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
         <link rel="icon" type="image/x-icon" th:href="@{/dnd5e/favicon.ico}"/>
         <link rel="stylesheet" type="text/css" th:href="@{/dnd5e/css/style.css}"/>
-        <title layout:fragment="title">D&D5E-WebTRPG</title>
+        <title layout:fragment="title">D&D5E-WebServer6329</title>
         <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     </head>
     <body>
         <header class="dnd5e-header">
             <button aria-label="Apri menu" id="menu-toggle" class="menu-toggle">☰</button>
             <a href="/dnd5e">
-                <img th:src="@{/dnd5e/favicon.ico}" th:href="@{'/dnd5e/'}" class="logo" title="Menu Principale" alt="WebTRPG"/>
+                <img th:src="@{/dnd5e/favicon.ico}" th:href="@{'/dnd5e/'}" class="logo" title="Menu Principale" alt="WebServer6329"/>
             </a>
             <a href="/profile">
-                <!--/*@thymesVar id="loggedUserDTO" type="it.italiandudes.webtrpg.core.data.UserDTO"*/-->
+                <!--/*@thymesVar id="loggedUserDTO" type="it.italiandudes.webserver6329.core.data.UserDTO"*/-->
                 <img th:src="${loggedUserDTO.getUserImageOrDefault()}" th:href="@{'/dnd5e/'}" class="profile" title="Profilo" alt="Profile"/>
             </a>
         </header>
@@ -27,7 +27,7 @@
             <span></span><span></span><span></span><span></span><span></span>
         </div>
         <div layout:fragment="content" class="page-content">
-            <h1>D&D5E-WebTRPG</h1>
+            <h1>D&D5E-WebServer6329</h1>
         </div>
         <footer class="dnd5e-footer">
             <p>Ideato da <a href="https://company.wizards.com">Wizard of the Coasts</a>. Personalizzato, progettato e scritto da <a href="https://github.com/Hacker6329">Hacker6329</a>, <a href="https://github.com/ItalianDudes">ItalianDudes</a></p>
