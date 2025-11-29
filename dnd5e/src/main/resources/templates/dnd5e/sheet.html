@@ -9,7 +9,7 @@
             <p style="text-align: center"><a th:href="@{'/dnd5e/campaigns/' + ${campaign.id} + '/sheets'}">TORNA ALLA LISTA SCHEDE</a></p>
             <p style="text-align: center"><a href="/dnd5e/campaigns">TORNA ALLA LISTA CAMPAGNE</a></p>
         </div>
-        <div th:if="${sheet != null}" th:with="baseURL=@{'/dnd5e/campaigns/' + ${sheet.getCampaign().getId()} + '/sheets/' + ${sheet.getId()} + '/'}">
+        <div style="margin-bottom: 10px;" th:if="${sheet != null}" th:with="baseURL=@{'/dnd5e/campaigns/' + ${sheet.getCampaign().getId()} + '/sheets/' + ${sheet.getId()} + '/'}">
             <aside id="sidebar" class="sidebar">
                 <a href="#"
                    class="tab-link active"
@@ -35,7 +35,7 @@
                 <a href="#" class="tab-link"
                    th:hx-get="${baseURL}+'tab/privileges-and-traits'"
                    hx-target="#tab-content"
-                   hx-trigger="load">Privilegi & Tratti</a>
+                   hx-trigger="click">Privilegi & Tratti</a>
 
                 <a href="#" class="tab-link"
                    th:hx-get="${baseURL}+'tab/equipment'"
@@ -50,7 +50,7 @@
                 <a href="#" class="tab-link"
                    th:hx-get="${baseURL}+'tab/spells'"
                    hx-target="#tab-content"
-                   hx-trigger="click">Incantesimi</a>
+                   hx-trigger="load">Incantesimi</a>
 
                 <a href="#" class="tab-link"
                    th:hx-get="${baseURL}+'tab/physical-description'"
