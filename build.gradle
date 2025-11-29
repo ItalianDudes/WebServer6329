@@ -6,7 +6,7 @@ plugins {
 }
 
 // Versioning
-def versionNumber = '0.0'
+def versionNumber = '0.1'
 def versionType = 'DEV' // RELEASE | BETA | ALPHA | DEV
 def versionMarker = versionType.charAt(0)
 version = versionNumber+versionMarker
